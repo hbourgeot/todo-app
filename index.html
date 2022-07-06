@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript ToDo App</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">How To use?</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Fill the Title input, but, the Description input is optional to
+              fill, click on 'Send' And you will see your todo item! Note: you
+              can add 1000 items, no more.
+            </p>
+            <p>
+              If you want to check any item, just click on the checkbox of the
+              left, and done! you will completed a task, if you want to remove
+              it, click on the button of the right with an 'X' in middle.
+            </p>
+            <p>
+              For filter your items, click on 'Active', 'Completed', or 'All'
+              buttons, there are located on the bottom of your screen
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>ToDo App</h1>
+    <div class="info">
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        <i class="bi bi-info-circle"></i>
+      </button>
+    </div>
+    <form class="form">
+      <input type="text" class="input-title" placeholder="Title" />
+      <textarea
+        name=""
+        id=""
+        placeholder="Description"
+        class="description"
+      ></textarea>
+      <button type="submit" class="btn-send">Send</button>
+    </form>
+    <form id="todo"></form>
+
+    <footer class="footer">
+      <section>
+        <button type="button" class="btn-status" id="active">
+          Active: <span id="count-active">0</span>
+        </button>
+      </section>
+      <section>
+        <button type="button" class="btn-status" id="completed">
+          Completed: <span id="count-completed">0</span>
+        </button>
+      </section>
+      <section>
+        <button type="button" class="btn-status" id="all">
+          All: <span id="count">0</span>
+        </button>
+      </section>
+    </footer>
+    <script src="script.js"></script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
